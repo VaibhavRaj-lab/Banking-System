@@ -10,10 +10,10 @@ const Datab = require("./models/all");
 const AppError = require("./views/AppError");
 
 
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT || 4000;
 
 
-mongoose.connect(process.env.MONGO , { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false })
+mongoose.connect("mongodb+srv://bank:0ztAVlUG9mtzHG26@cluster0.rk1ef.mongodb.net/bank?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false })
     .then(() => {
         console.log("connected");
     })
